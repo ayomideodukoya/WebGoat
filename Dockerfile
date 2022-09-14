@@ -11,8 +11,8 @@ USER webgoat
 
 COPY --chown=webgoat docker/nginx.conf /etc/nginx/nginx.conf
 COPY --chown=webgoat docker/index.html /usr/share/nginx/html/
-COPY --chown=webgoat target/webgoat-server-${webgoat_version}.jar /home/webgoat/webgoat.jar
-COPY --chown=webgoat target/webwolf-${webgoat_version}.jar /home/webgoat/webwolf.jar
+COPY --chown=webgoat docker/target/webgoat-server-${webgoat_version}.jar /home/webgoat/webgoat.jar
+COPY --chown=webgoat docker/target/webwolf-${webgoat_version}.jar /home/webgoat/webwolf.jar
 COPY --chown=webgoat docker/start.sh /home/webgoat
 
 EXPOSE 8080
